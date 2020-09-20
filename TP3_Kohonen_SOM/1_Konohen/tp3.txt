@@ -1,0 +1,100 @@
+kohonen
+
+mapa, los pesos son distribuado en un mapa, entre los pesos
+
+mapa entre patrones entrada et activité de la red
+
+un patron entrada corresponde salida de la red
+
+special, mape
+
+aca neuronas position en el esapcio
+
+distancia entre las neuronnas 
+
+2 neuironnes apres apprentissage, sont proche, 
+
+un patron qui active une neuronne
+un patron similaire active une neuronne pas très loin
+
+=> mapa organisada en el espacio
+
+*****
+mapa autoorganisado, 
+
+organiser pour que sortie de la red soit une classe ( je peux)
+
+
+data datos, menor dimensionalidad, reduire les dimensions
+
+dimension 3D ou une dimension pas variations tu la reduit à 2D
+
+no supervisey
+
+
+details algo.
+
+distribution puntos uniforme dans un cercle
+
+d'abord genere vecteur dimension2, unfiorme dans un cercle
+
+dos dimensions entrée, X et Y
+un vecteur patrons et poids synaptique dans meme espace
+
+grille c'est des neuronnes 100 neuronnes, 10x10 
+un vecteur poids synaptique pour chaque neuronne (les coordonnées)
+grille juste les coordonnées des neuronnes
+4 voisins
+
+t'as les patrons, que tu genere al hasard (dans le cercle)
+tu genere 100 neuronnes, pesos synapticos al hasard
+
+1ere iteration
+1 patron al hasard dans le cercle, tu dois trouver quel neuronne activer, 
+1 seule neuronne qui s'active
+
+comment tu fais pour savoir la quelle?
+distance euclidienne entre patron et le vecteur de poids synapticos pour chq neuronnes
+distance la plus faible, neuronne gagnante = i* ,
+
+quanfd t'as trouver la ganadora en rouge , tu dois pouvoir la ubicar la dans la grille
+
+chaque neuronne poids synaptiques et ses cordonnées dans la grille
+
+
+actualizer w entre 
+
+difference entre la entrada jota y la neuronna i 
+
+neuronne cercana dispara similare
+
+lambda majuscule fonction de vecinidad, rgande quand neuronnes sont proches, petit quand les neuronnes sont loins
+
+distance euclidienne entre ganadora y toutes les autres
+
+ça va faire une gaussienne centré sur la neuronne qui gagne, ancho de la veciniddad sera le sigma
+
+sigma grand , se actualizan toutes, 
+
+randperm, actualizer pesos suynaptico en passant apar cada patron
+
+quand t'es passé par tous les patrons
+
+tu commence avec sigma grande et apres tu vas le diminuer sigma = 0.99simgma
+
+sigma grande red se orden
+sigma chico 
+
+pesos synapticos , relié si 4 voisines, 
+
+initialise les pesos avec uniforme concentré au centre
+
+
+
+plot W1 w2
+
+w1 10x10, neuronnas/elementos, poids entré 1
+w2 neuronnes/elementos pesos poids entré2
+
+
+

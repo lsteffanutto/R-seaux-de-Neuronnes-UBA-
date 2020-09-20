@@ -1,0 +1,113 @@
+machine boltzman registrinada
+
+obtener parametre inicial bien pour apres entrainer avec gradient descendant
+
+implementer pre entrainement avec maquina de boltzman
+
+una capa visible
+
+
+
+
+una capa oculta
+
+
+entrener avec set de datos, version restingidast MNIST
+20 images par digitaux
+
+.mat
+
+cpa visible = entrada = pixels si image
+
+capa occulta = 
+
+1) definir salida capa visible, 28x28
+
+salida v_i
+
+h_j
+
+dabord defini m_i = a la valuer du pixel
+avec m_i, v_i se saca distribution normal N(mi,1)
+
+v_i = capa oculta
+
+
+3) h_j = salida capa oculta (0 ou 1)
+probabilidad = equation, equation avec sigma(sigmoid)
+de un biais + la sum sur toutes les neuronnes * les wij
+
+3) salida capa oculta par una imagen elegi al azar a presenter
+
+4) vihj producto.
+
+5) delta_wij = confubasion
+
+capa visible, definimos
+
+nueva media m_i= capa visible depend capa oculta
+= biais (1chq neuronne capa visible) + sum(salida * wij)
+
+6) calcul nuevo v_i avec la normal
+
+7) nuevo hj, avec proba
+
+8) vjhj_recon = para version confabulacion
+
+
+tu fais ça une fois pour chaque patrons en stockant les vihj des images 
+tu fais la moyenne puis tu calcul deltawi
+et avec la moyenne v_i et hj delta des biais
+
+et la normalement à la fin , même avec 2 capa, tu peux verifier que se recupera les valeurs des digitos assez bien
+
+apres entrainepment tu peux probar avec digitaos
+
+prend original et tu le hagar un peu
+
+capa ocultas = 200 neuronnas
+
+epsilo devant = constante apprentissage 0.01
+
+matrice test, cada fila c'est une image
+pgm convertirfila en image
+
+
+
+
+
+
+
+******** Explications EN PLUS ********
+
+=>de 1 à 8 quand tu présente un patron, une image
+
+mi = capa visible
+2) oculta/3
+
+4) los datos
+
+5 à 8 = confabulation
+acap oculta pour redefinir etat visible de nuevo et de nu
+
+tu gardes les v_ihj qui sont des matrices = dimensions matrice poids synaptiques
+
+tu repete ça pour chaque patrons, donc t'as 200 matrices mais tu vas les additionner
+
+entre crochet = promedio a traves todo los patrones = matrice tiene dimension pesos synapticos
+
+caso biais pareil que vihj
+
+*****************************************
+
+Patricio (même probleme)
+
+pas imshow et mettre imagesc, foutre matlab en noir
+200 neuronnas
+iterations 20
+initialiar tu multiplie par1 et c'est plus de la merde mais c'est distintos
+
+y'aura pas plus de classe ou ejercicios ENVOYER
+
+eta = 0.05
+alpha 0.999 viajante comerce 500 iterations

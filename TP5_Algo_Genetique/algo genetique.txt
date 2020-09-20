@@ -1,0 +1,114 @@
+algo genetique
+
+
+même architecture capa oculta capa salida etc que le perceptron
+
+mais au lieu d'avoir que une seule red
+
+t'auras une population de red
+
+et chaque red = un individu de la population
+
+chaque iteration = une generacion
+
+
+
+generacion 1 
+
+N numero idiv dans poblacion
+
+W todos los parametros de la red que je veux optimiser
+
+chaque individu son propre ensemble de W
+
+au debut tu les initie randn etc
+
+2ndo paso , evaluar cada individuo, cual bien les va
+
+approximar la fonctionne xor
+
+taura une salida de la red et una salida deseada et t'auras une erreur como E
+
+erro quadratico medio avec y deseada et y real et diviser pr num total patrones
+
+Ici on maximizar un fitness, F=1-E/4
+
+erreur mas fitness moins erreur , on veut maximiser fitness
+
+cada individuo tiene su F
+
+etapa evaluacion, identifie individuo ELite, et tu sauvegarde le F le plus grand 
+
+
+paso sigue reproduccion et selection
+
+generar nueva poblacion de mismo numero de individuos qui est la descendance
+un individu, y'aura cada individuo de la generation 1 avec une proba de se reproduire et d'avoir une descendance avec la proba Prep, proportionnal al fitness
+
+et on utilise operador crossover, mismo que sergio avec 1 et 0:
+
+= combinar los parametros de 2 individuos
+on imagine les w sont tous aligné sur une ligne
+on va indiquer un point dans cette ligne et on prend la premiere partie tie de l'un combiné tie
+partie de l'autre , ils echangent leurs bails
+
+t'auras todo le tiempo une generacion de red muy distintas
+
+siempre red différentes, ce qui permet de peut etre salir minimo local
+
+
+quand t'as defini la prob pour de finir 100 individus, c'est des copies de la generacion 1
+quand t'as la generacion de descendance, y'a une proba de cross over 0.1
+
+tu prend le premier , tire numero al hasard si <0.1, tu fais un cross over avec nimp indivuo al azar.
+on les prend un par un la 2eme generacion avec proba 0.1
+on evalue chacun independant
+
+y'a un monton de recettas distintas
+
+
+PETA UN LIVRE DE LA CASA FITZ ROY
+
+descendance mas rica avec les individuos de fitness alto
+
+si 2 individus fitness altos, occuran menos, 
+
+quand t'as descendance cross over => mutacion
+
+
+t'as aussi des 1 et 0, on a des poids synaptiques, mutacion = 
+pour chaques poids w , mutar lo = sumar le r ~ N(,sigma²)
+
+la mutacion tu l'applique à chaque individus de la descendance, des 100 individus => 99 et tu garde individu elite qu'on garde.
+
+gen 2 apres mutacion
+
+
+ensuite tu recommence
+
+tu peux cortar le délire quand le meilleure individu arrive 0.95/0.99.
+
+xor pas trop chaud a optimiser avec cette shit
+
+quand tu l'as implementer tu compare les possibilidad avec ça et tu regarde comment ça evolue en fonction des parametres sigma et cross over
+
+et tu regardes le plus important dans le probleme
+
+*****
+
+W = pesos de todo la red donc un W pour chaque red
+
+N=100; 100 individu
+
+reproducion = individu 1 de la descendance, sur les 100 tu choisis un entre le 1 et le 100 de se reproduire avec la proba Prep
+
+t'en a qui auront plus de chance de se reproduire, chaque individu a son probabilité
+
+rouletta divisé en segmento
+
+Np = num de patron = 4 pour chaqque red
+
+mutacion un seule gene qui mute = 1 peso de un individu
+
+100 indiv reproduci 99
+
